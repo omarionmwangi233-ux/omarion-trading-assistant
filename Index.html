@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Omarion Trading Assistant</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+  
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>📈 Omarion Trading Assistant</h1>
+
+<p>Market</p>
+
+<select id="market">
+<option>EUR/USD</option>
+<option>GBP/USD</option>
+<option>USD/JPY</option>
+<option>XAU/USD (Gold)</option>
+</select>
+
+<p>Timeframe</p>
+
+<select id="timeframe">
+<option>1 Minute</option>
+<option>5 Minutes</option>
+<option selected>15 Minutes</option>
+<option>1 Hour</option>
+<option>4 Hours</option>
+</select>
+
+<p>Market Session</p>
+
+<select id="session">
+<option>Asian Session 🌏</option>
+<option>London Session 🇬🇧</option>
+<option>New York Session 🇺🇸</option>
+</select>
+
+<p>Trend Direction</p>
+
+<select id="trendDirection">
+<option>Uptrend 📈</option>
+<option>Downtrend 📉</option>
+<option>Sideways ↔️</option>
+</select>
+<p>Market Structure</p>
+
+
+
+<select id="marketStructure">
+<option>Higher Highs & Higher Lows 📈</option>
+<option>Lower Highs & Lower Lows 📉</option>
+<option>Range / Consolidation ↔️</option>
+</select>
+<p>Account Balance</p>
+<input type="number" id="accountBalance" placeholder="Enter account balance">
+
+<p>Support Price</p>
+
+<input
+type="number"
+id="support"
+step="0.01"
+required
+placeholder="Enter Support Price">
+
+<p>Resistance Price</p>
+
+<input
+type="number"
+id="resistance"
+step="0.01"
+required
+placeholder="Enter Resistance Price">
+
+<p>Current Price</p>
+
+<input
+type="number"
+id="price"
+step="0.01"
+required
+placeholder="Enter Current Price">
+
+<p>Candlestick Pattern</p>
+
+ <select id="candle">
+    <option value="None">None</option>
+    <option value="Bullish Engulfing">Bullish Engulfing</option>
+    <option value="Bearish Engulfing">Bearish Engulfing</option>
+    <option value="Hammer">Hammer</option>
+    <option value="Shooting Star">Shooting Star</option>
+    <option value="Pin Bar">Pin Bar</option>
+    <option value="Doji">Doji</option>
+</select>
+
+<br><br>
+
+<button id="analyzeBtn">Analyze</button>
+
+<button id="resetBtn">Reset</button>
+<p id="loading"></p>
+
+<p id="marketInfo"></p>
+
+<p id="trend"></p>
+<p id="signal"></p>
+<p id="confidence"></p>
+<p id="strength"></p>
+<div id="tradeApproval"></div>
+<p id="stopLoss"></p>
+<p id="takeProfit"></p>
+<p id="tp1"></p>
+<p id="tp2"></p>
+<p id="tp3"></p>
+<p id="tradeScore"></p>
+<p id="aiStatus"></p>
+
+
+<p><strong>Entry Confirmation:</strong></p>
+<p id="entryConfirmation"></p>
+
+<p><strong>AI Reason:</strong></p>
+<p id="reason"></p>
+
+<p><strong>Risk / Reward:</strong></p>
+<p id="riskReward"></p>
+
+<p><strong>Recommended Position Size:</strong></p>
+<p id="positionSize"></p>
+
+<hr>
+
+<h3>📜 Trade History</h3>
+<div id="tradeHistory"></div>
+
+<hr>
+
+<h3>📊 Statistics</h3>
+
+<p id="wins"></p>
+<p id="losses"></p>
+<p id="winRate"></p>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+  <script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+}
+  </script>
+
+</body>
+</html>
