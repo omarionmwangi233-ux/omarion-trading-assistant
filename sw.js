@@ -1,4 +1,4 @@
-const CACHE_NAME = "omarion-v1";
+const CACHE_NAME = "omarion-v2";
 
 const FILES_TO_CACHE = [
     "./",
