@@ -640,9 +640,9 @@ let trade = {
     signal: signal,
     price: price,
     stopLoss: stopLoss,
-    tp1: tp1,
-    tp2: tp2,
-    tp3: tp3,
+    tp1: typeof tp1 === "number" ? tp1.toFixed(5) : String(tp1),
+tp2: typeof tp2 === "number" ? tp2.toFixed(5) : String(tp2),
+tp3: typeof tp3 === "number" ? tp3.toFixed(5) : String(tp3),
     takeProfit: takeProfit
 };
     
