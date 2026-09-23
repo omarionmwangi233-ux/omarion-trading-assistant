@@ -635,14 +635,17 @@ let takeProfit = document.getElementById("takeProfit").innerText.replace("Take P
     if (!signal || signal.includes("WAIT")) {
         return;
     }
-
-    let trade = {
-        date: new Date().toLocaleString(),
-        signal: signal,
-        price: price,
-        stopLoss: stopLoss,
-        takeProfit: takeProfit
-    };
+let trade = {
+    date: new Date().toLocaleString(),
+    signal: signal,
+    price: price,
+    stopLoss: stopLoss,
+    tp1: tp1,
+    tp2: tp2,
+    tp3: tp3,
+    takeProfit: takeProfit
+};
+    
 
     tradeHistory.push(trade);
 
