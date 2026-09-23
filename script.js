@@ -676,7 +676,9 @@ function displayTradeHistory() {
                 <p>Signal: ${trade.signal}</p>
                 <p>Entry: ${trade.price}</p>
                 <p>Stop Loss: ${trade.stopLoss}</p>
-                <p>Take Profit: ${trade.takeProfit}</p>
+                <p>TP1: ${trade.tp1 || "-"}</p>
+<p>TP2: ${trade.tp2 || "-"}</p>
+<p>TP3: ${trade.tp3 || "-"}</p>
 
                 <p><strong>Result:</strong> ${trade.result || "PENDING ⏳"}</p>
 
